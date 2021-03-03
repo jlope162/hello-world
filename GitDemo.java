@@ -1,9 +1,10 @@
 /*****
- * Edit this line to have your name.
+ * Name: Jasmin Lopez. /*Changed in branch1*/
  ******/
 public class GitDemo {
     
     private double previousNumber;
+    private double reverseNum; /*Added in branch 1*/
     
     public GitDemo() {
         previousNumber = 1;
@@ -14,6 +15,7 @@ public class GitDemo {
     *****/
     public double addNumber(double num) {
         System.out.print("Add num to previousNumber");
+        previousNumber += num; /*added in part 1*/
         return 0;
     }
     
@@ -22,12 +24,14 @@ public class GitDemo {
      * i.e. if num = 4,
      *  the function will return the value of (1 * 2 * 3 * 4)
      *****/
-    public double findFactorial(int num) {
+    public double findFactorial(int num) { /*swapped in branch2*/
         double newNumber = 1;
         
         for(int i = 1; i <= num; i++){
             newNumber = newNumber * i;
         }
+      
+        reverseNum = newNumber; /*added in branch 1*/
         
         return newNumber;
         
@@ -38,7 +42,7 @@ public class GitDemo {
      * i.e. if num = 1234
      *  the function will return 4321
      *****/
-    public double reverseNumber(int num){
+    public double reverseNumber(int num){ /*swapped in branch2*/
         double factorialNumber = 0;
         
         while(num != 0) {
@@ -46,9 +50,9 @@ public class GitDemo {
             factorialNumber = factorialNumber * 10 + temp;
             num /= 10;
         }
-        
+
         return factorialNumber;
-            
+
     }
     
 }
